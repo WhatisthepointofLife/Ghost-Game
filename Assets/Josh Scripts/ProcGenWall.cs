@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProcGenUp : MonoBehaviour
+public class ProcGenWall : MonoBehaviour
 {
     [SerializeField] int width;
     [SerializeField] GameObject UpLevel;
@@ -14,7 +14,7 @@ public class ProcGenUp : MonoBehaviour
     // Update is called once per frame
     void Generation()
     {
-        for (int x = 0; x < width; x++) 
+        for (int x = 0; x < width; x++)
         {
             Instantiate(UpLevel, new Vector2(x, 4), Quaternion.identity);
         }
