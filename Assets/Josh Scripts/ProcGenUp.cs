@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ProcGenUp : MonoBehaviour
 {
-    [SerializeField] int width;
-    [SerializeField] GameObject UpLevel;
+    [SerializeField] int width,height = 0;
+    [SerializeField] GameObject UpLevel = null;
     void Start()
     {
         Generation();
@@ -16,8 +16,11 @@ public class ProcGenUp : MonoBehaviour
     {
         for (int x = 0; x < width; x++) 
         {
-            //Instantiate(UpLevel, new Vector2(x, 4), Quaternion.identity);
-            spawnObj(UpLevel, x);
+            for (int y = 0; y < height; y++)
+            {
+                //Instantiate(UpLevel, new Vector2(x, 4), Quaternion.identity);
+                spawnObj(UpLevel, x);
+            }
         }
 
     }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ProcGen : MonoBehaviour
 {
-    [SerializeField] int width;
-    [SerializeField] GameObject GroundLevel;
+    [SerializeField] int width = 0;
+    [SerializeField] GameObject GroundLevel = null;
     void Start()
     {
         Generation();

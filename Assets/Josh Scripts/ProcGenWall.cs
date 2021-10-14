@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ProcGenWall : MonoBehaviour
 {
-    [SerializeField] int width, height;
-    [SerializeField] GameObject Wall;
+    [SerializeField] int width,height = 0;
+    [SerializeField] GameObject Wall = null;
     void Start()
     {
         Generation();
@@ -16,7 +16,7 @@ public class ProcGenWall : MonoBehaviour
     {
         for (int x = 0; x < width; x++)//spawns on the x axis
         {
-            for (int y = 0; y < width; y++)
+            for (int y = 0; y < height; y++)
             {
                 //Instantiate(Wall, new Vector2(x, 2), Quaternion.identity);
                 spawnObj(Wall, x);
